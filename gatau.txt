@@ -1,0 +1,48 @@
+```
+
+---
+
+# 📸 Cara Tambah Foto
+
+Di `main.html`, cari bagian:
+
+```html
+<div class="photo-card">
+  <img src="foto1.jpg">
+  <p class="photo-caption">caption</p>
+</div>
+```
+
+Tinggal copy lalu ganti:
+
+* nama foto
+* caption
+
+---
+
+# 🎵 Cara Ganti Lagu
+
+Masukin file lagu ke folder project lalu rename jadi:
+
+```text
+music.mp3
+```
+
+Atau ganti bagian:
+
+```html
+<source src="music.mp3">
+```
+
+---
+
+# 🚀 Upload ke GitHub Pages
+
+1. Buat repository GitHub
+2. Upload semua file
+3. Settings → Pages
+4. Deploy from branch
+5. main → root
+6. Save
+
+Nanti bakal muncul link website kamu 💜

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Ayangggg</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="about-you.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+<section class="section hero-section fade">
+  <div class="hero-content">
+    <p class="hero-mini">happy birthday to</p>
+    <h1>My Favorite Person 💜</h1>
+  </div>
+</section>
+
+<!-- BEFORE -->
+<section class="section section-blend fade center">
+  <h2>Sebelum itu...</h2>
+</section>
+
+<!-- SLIDER -->
+<section class="section photo-section fade">
+
+  <div class="sticker sticker1">✨</div>
+  <div class="sticker sticker2">💜</div>
+
+  <div class="slider" id="slider">
+
+    <div class="slides" id="slides">
+
+      <div class="photo-card">
+        <img src="img1.jpeg" class="active">
+        <p class="photo-caption">kecil aja udah lucu 😭 (slide kirii)</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="img2.1.jpg.png">
+        <p class="photo-caption">melet dari kicik</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="img3.jpeg">
+        <p class="photo-caption">udah mulai gede, mam escimm</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="img4.jpeg">
+        <p class="photo-caption">HAHA era jamett tapi lucukk</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="img5.jpeg">
+        <p class="photo-caption">ni ape pulakk WKAKA</p>
+      </div>
+
+      
+      <div class="photo-card">
+        <img src="img6.jpeg">
+        <p class="photo-caption">ciyee uda mulai SMA</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img7.jpeg">
+        <p class="photo-caption">dan sekarang mahasiswa smt 4, makin cantik huhu🥺🥹</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img8.jpeg">
+        <p class="photo-caption">Some memories</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img9.jpeg">
+        <p class="photo-caption">Some memories</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img10.jpeg">
+        <p class="photo-caption">Some memories</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img11.jpeg">
+        <p class="photo-caption">Some memories</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img12.jpeg">
+        <p class="photo-caption">Some memories</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img12.1.jpeg">
+        <p class="photo-caption">Some memories</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="img13.jpeg">
+        <p class="photo-caption">Some memories</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- POPUP BUTTON -->
+<section class="section section-blend-reverse center fade">
+  <button onclick="openPopup()">
+    klik ini lagii
+  </button>
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+
+  <div class="popup-content">
+
+    <span class="close" onclick="closePopup()">×</span>
+
+    <h3>Happy Birthday 💜</h3>
+
+    <div class="popup-text">
+      Selamat ulang tahun ya sayang... 💜
+      <br><br>
+    Ucapan dan doa-doaku pasti selalu sama tiap tahun, semoga kamu sehat selalu, sukses, dan semua keinginanmu tercapai yaa sayangg.
+    Tidak terasa sudah 20 tahun hadir di dunia ini, dan sudah berjuang sejauh ini sayang.
+
+    <br><br>
+     Terakasih banyak banyak banyak aku ucapin karena udah hadir di bumi dan di hidupku sayang.
+     Terimakasih sudah berusaha sejauh ini, aku tau hidup memang tidak mungkin semudah itu, tapi aku percaya kamu pasti bisa melewati semuanya sayang.
+     Kamu adalah salah satu wanita terhebat yang aku ketahui, i'm so proud of you sweetie❤️. 
+     You are such a beautiful and a nice person.
+
+     <br><br>
+     Semoga kamu selalu dikelilingi oleh orang orang baik, dimudahkan jalannya, dan dilancarkan selalu rezekinyaa sayangg.
+     Maaf hadiahnya ini aja yaaa semoga kamu sukaaa 😁😁
+
+     <br><br>
+     Happy 20th Birthday, Sayangku💜
+     <br><br><br>
+     Your Boy, Sunnie
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- QUOTE -->
+<section class="section quote-section fade center">
+  <p class="quote">
+    “Kalau aku disuruh milih lagi,
+    aku tetap bakal milih kamu.”
+  </p>
+</section>
+
+<!-- ENDING -->
+<section class="section ending-section center">
+
+  <div class="ending-overlay"></div>
+
+  <div id="ending" class="ending">
+    I Love You 💜
+  </div>
+</section>
+
+<section class="section ending-section center">
+        <br><br>
+  <div class="floating floating1">🥳</div>
+  <div class="floating floating2">✨</div>
+  <div class="floating floating3">🫶</div>
+  <div class="floating floating4">🎉</div>
+<button onclick="window.location.href='final.html'">
+Klik lagi atuu janji terakhir hehee
+</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
