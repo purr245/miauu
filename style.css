@@ -779,3 +779,9 @@ button {
 .nav:hover {
   transform: scale(1.08);
 }
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
