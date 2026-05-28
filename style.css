@@ -743,45 +743,18 @@ button {
   }
 
 }
-/* SLIDER CONTAINER */
 
-.slider-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
+.slider {
+  overflow: hidden;
 
-/* NAV BUTTON */
+  max-width: 320px;
+  margin: auto;
 
-.nav {
-  width: 42px;
-  height: 42px;
+  touch-action: pan-y;
 
-  border: none;
-  border-radius: 999px;
+  user-select: none;
+  -webkit-user-select: none;
 
-  background: white;
-  color: #7b5cff;
-
-  font-size: 28px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-
-  transition: 0.3s ease;
-
-  flex-shrink: 0;
-}
-
-.nav:hover {
-  transform: scale(1.08);
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
 }
