@@ -51,72 +51,85 @@ function showOnScroll() {
 window.addEventListener('scroll', showOnScroll);
 
 // SLIDER
+// SLIDER
+const slides = document.getElementById("slides");
+
 let index = 0;
 
-const slides = document.getElementById("slides");
-const totalSlides = slides.children.length;
+let totalSlides = 0;
+
+if (slides) {
+
+  totalSlides = slides.children.length;
+
+}
 
 function updateSlide() {
-  slides.style.transform = `translateX(-${index * 100}%)`;
+
+  if (!slides) return;
+
+  slides.style.transform =
+    `translateX(-${index * 100}%)`;
+
 }
 
 function nextSlide() {
+
   index = (index + 1) % totalSlides;
-  updateSlide();
-}
-
-function prevSlide() {
-
-  index = (index - 1 + totalSlides) % totalSlides;
 
   updateSlide();
 
 }
 
-//setInterval(nextSlide, 3500);
+/* SWIPE */
 
-// SWIPE
 let startX = 0;
 let startY = 0;
 
 const slider = document.getElementById("slider");
 
-slider.addEventListener("touchstart", e => {
+if (slider) {
 
-  startX = e.touches[0].clientX;
-  startY = e.touches[0].clientY;
+  slider.addEventListener("touchstart", e => {
 
-});
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
 
-slider.addEventListener("touchend", e => {
+  }, { passive: true });
 
-  let endX = e.changedTouches[0].clientX;
-  let endY = e.changedTouches[0].clientY;
+  slider.addEventListener("touchend", e => {
 
-  let diffX = startX - endX;
-  let diffY = startY - endY;
+    let endX = e.changedTouches[0].clientX;
+    let endY = e.changedTouches[0].clientY;
 
-  // harus benar-benar horizontal
-  if (
-    Math.abs(diffX) > 60 &&
-    Math.abs(diffX) > Math.abs(diffY)
-  ) {
+    let diffX = startX - endX;
+    let diffY = startY - endY;
 
-    if (diffX > 0) {
-      nextSlide();
+    if (
+      Math.abs(diffX) > 60 &&
+      Math.abs(diffX) > Math.abs(diffY)
+    ) {
+
+      if (diffX > 0) {
+
+        nextSlide();
+
+      }
+
+      else {
+
+        index =
+          (index - 1 + totalSlides) % totalSlides;
+
+        updateSlide();
+
+      }
+
     }
 
-    else {
+  }, { passive: true });
 
-      index = (index - 1 + totalSlides) % totalSlides;
-
-      updateSlide();
-
-    }
-
-  }
-
-});
+}
 
 // POPUP
 function openPopup() {
