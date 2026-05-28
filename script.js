@@ -76,7 +76,47 @@ function prevSlide() {
 //setInterval(nextSlide, 3500);
 
 // SWIPE
+let startX = 0;
+let startY = 0;
 
+const slider = document.getElementById("slider");
+
+slider.addEventListener("touchstart", e => {
+
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+
+});
+
+slider.addEventListener("touchend", e => {
+
+  let endX = e.changedTouches[0].clientX;
+  let endY = e.changedTouches[0].clientY;
+
+  let diffX = startX - endX;
+  let diffY = startY - endY;
+
+  // harus benar-benar horizontal
+  if (
+    Math.abs(diffX) > 60 &&
+    Math.abs(diffX) > Math.abs(diffY)
+  ) {
+
+    if (diffX > 0) {
+      nextSlide();
+    }
+
+    else {
+
+      index = (index - 1 + totalSlides) % totalSlides;
+
+      updateSlide();
+
+    }
+
+  }
+
+});
 
 // POPUP
 function openPopup() {
