@@ -743,18 +743,3 @@ button {
   }
 
 }
-
-.slider {
-  overflow: hidden;
-
-  max-width: 320px;
-  margin: auto;
-
-  touch-action: pan-y;
-
-  user-select: none;
-  -webkit-user-select: none;
-
-  -webkit-tap-highlight-color: transparent;
-  position: relative;
-}
