@@ -65,6 +65,14 @@ function nextSlide() {
   updateSlide();
 }
 
+function prevSlide() {
+
+  index = (index - 1 + totalSlides) % totalSlides;
+
+  updateSlide();
+
+}
+
 //setInterval(nextSlide, 3500);
 
 // SWIPE
