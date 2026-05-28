@@ -65,7 +65,7 @@ function nextSlide() {
   updateSlide();
 }
 
-setInterval(nextSlide, 3500);
+//setInterval(nextSlide, 3500);
 
 // SWIPE
 let startX = 0;
